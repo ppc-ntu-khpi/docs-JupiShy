@@ -2,6 +2,10 @@ package test;
 
 import domain.*;
 
+/**
+ * Клас тестування класів робітників
+ * @author jupishy
+ */
 public class EmployeesTest {
 
     public static void main(String args[]) {

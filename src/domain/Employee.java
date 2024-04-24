@@ -1,6 +1,14 @@
 package domain;
+/**
+ * Базовий клас "Робітник"
+ * @author jupishy
+ */
 public class Employee {
 
+    /**
+     * Вивід інформації про робітника
+     * @return Айді, ім'я, робота, рівень, відділ
+     */
     @Override
     public String toString() {
         return "\nEmployee ID= " + ID + "\nName= " + name + "\nJobTitle= " + jobTitle + "\nLevel= " + level + "\nDept= " + dept;
@@ -14,6 +22,13 @@ public class Employee {
 
    // private static int employeesCount = 0;
 
+    /**
+     * Встановлення відомостей про робітника
+     * @param name ім'я
+     * @param jobTitle робота
+     * @param level рівень
+     * @param dept відділ
+     */
     public Employee(String name, String jobTitle, int level, String dept) {
         this();
         setName(name);
@@ -30,6 +45,9 @@ public class Employee {
         this.dept = dept;
     }
 
+    /**
+     * Ініціалізація айді робітника
+     */
     public Employee() {
         ID = (int)(Math.random()*1000);
 //        if (ID > 10000) {
@@ -37,18 +55,34 @@ public class Employee {
 //        }
     }
 
+    /**
+     * Встановити роботу
+     * @param job 
+     */
     public void setJobTitle(String job) {
         jobTitle = job;
     }
 
+    /**
+     * Дізнатися роботу
+     * @return робота
+     */
     public String getJobTitle() {
         return jobTitle;
     }
 
+    /**
+     * Дізнатися ім'я
+     * @return ім'я
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Встановити рівень
+     * @param level рівень робітника
+     */
     public void setLevel(int level) {
         switch (level) {
             case 1:
@@ -61,18 +95,34 @@ public class Employee {
         }
     }
 
+    /**
+     * Дізнатися рівень
+     * @return рівень робітника
+     */
     public int getLevel() {
         return level;
     }
 
+    /**
+     * Дізнатися відділ
+     * @return відділ робітника
+     */
     public String getDept() {
         return dept;
     }
 
+    /**
+     * Встановити відділ
+     * @param dept відділ
+     */
     public void setDept(String dept) {
         this.dept = dept;
     }
 
+    /**
+     * Встановити ім'я
+     * @param name ім'я робітника
+     */
     public void setName(String name) {
 //        boolean correctName = true;
 //        for (int i = 0; i < name.length(); i++) {
